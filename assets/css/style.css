@@ -1,0 +1,260 @@
+/*--------------------------------------------------------------
+# Settings
+--------------------------------------------------------------*/
+@media only screen and (min-width: 990px) {
+  #containerskills {
+    width: 75%!important;
+  }
+}
+.navbar-toggler{
+  background-color: white!important;
+}
+.navbar-toggler:focus{
+  box-shadow: none!important;
+}
+@media only screen and (max-width: 990px) {
+  .navbar-nav {
+    width: 50%!important;
+    text-align: center;
+    background-color: rgba(25, 28, 31, 0.8);
+  }
+}
+.navbar-toggler-icon{
+  background-image: url("../img/navbar-toggler-icon.png")!important;
+}
+.h-8{
+  height:8%!important;
+}
+.secondary{
+  background: rgba(25, 28, 31, 0.8)!important;
+}
+.primary{
+  color: #13c3ba!important;
+}
+.text-light{
+  color: #eef0f2!important;
+}
+.bg-light{
+  background-color: #eef0f2!important;
+}
+.reveal{
+  opacity: 1!important;
+  transform: translateY(0)!important;
+  transition: 1s cubic-bezier(0.5,0,0,1)!important;
+ }
+.reveal.reveal-NotVisible{
+  opacity: 0!important;
+  transform: translateY(50)px!important;
+  transition: 1s cubic-bezier(0.5,0,0,1)!important;
+}
+.glow{
+  -webkit-animation: glow 2s ease-in-out infinite alternate;
+  -moz-animation: glow 2s ease-in-out infinite alternate;
+  animation: glow 2s ease-in-out infinite alternate;
+}
+@keyframes glow {
+  from {
+    box-shadow: 0 0 1px #13c3ba, 0 0 3px #13c3ba, 0 0 5px #13c3ba, 0 0 7px #13c3ba, 0 0 9px #13c3ba, 0 0 11px #13c3ba, 0 0 13px #13c3ba;
+  }
+  to {
+    box-shadow: 0 0 2px #13c3ba, 0 0 6px #13c3ba, 0 0 10px #13c3ba, 0 0 14px #13c3ba, 0 0 18px #13c3ba, 0 0 22px #13c3ba, 0 0 26px #13c3ba;
+  }
+}
+.opacity{
+  -webkit-animation: glow 2s ease-in-out infinite alternate;
+  -moz-animation: glow 2s ease-in-out infinite alternate;
+  animation: glow 2s ease-in-out infinite alternate;
+}
+@keyframes opacity{
+  from {
+    border: 2px solid transparent;
+
+  }
+  to {
+    border: 2px solid #13c3ba;
+  }
+}
+/*--------------------------------------------------------------
+# Header
+--------------------------------------------------------------*/
+#navbar {
+  transition: all 1s;
+}
+.nav-link{
+  color: white;
+}
+.nav-link:hover, .nav-link:focus{
+  transition: all 0.2s;
+  color: #13c3ba;
+}
+.active{
+  transition: all 0.2s;
+  color: #13c3ba;
+}
+/*--------------------------------------------------------------
+# Home Section
+--------------------------------------------------------------*/
+#home {
+  height: 100vh;
+  background: url("../img/fond.webp") top right;
+  background-size: cover;
+}
+#home h1 {
+  font-family: "Satisfy", serif;
+}
+#home h2 {
+  text-transform: uppercase;
+}
+#home .btn-scroll {
+  transition: 0.4s;
+  color: rgba(255, 255, 255, 0.6);
+  animation: up-down 1s ease-in-out infinite alternate-reverse both;
+}
+#home .btn-scroll i {
+  font-size: 48px;
+}
+#home .btn-scroll:hover {
+  color:#13c3ba;
+}
+@-webkit-keyframes up-down {
+  0% {
+    transform: translateY(5px);
+  }
+  100% {
+    transform: translateY(-5px);
+  }
+}
+
+@keyframes up-down {
+  0% {
+    transform: translateY(5px);
+  }
+  100% {
+    transform: translateY(-5px);
+  }
+}
+.profil{
+  overflow: hidden;
+  border-radius: 50%;
+  width: 15em;
+}
+/*--------------------------------------------------------------
+# Sections General
+--------------------------------------------------------------*/
+.section-title h2 {
+  text-transform: uppercase;
+}
+.section-title span {
+  top: 30px;
+  text-transform: uppercase;
+}
+.container-border{
+  box-shadow: 0 0 30px rgba(214, 215, 216, 0.6);
+  border-radius: 10px;
+}
+/*--------------------------------------------------------------
+# About Me
+--------------------------------------------------------------*/
+.about .content ul {
+  list-style: none;
+  padding: 0;
+}
+/*--------------------------------------------------------------
+# My course
+--------------------------------------------------------------*/
+.course .course-item {
+  border-left: 2px solid #82909c;
+}
+.course .course-item h4 {
+  text-transform: uppercase;
+}
+.course .course-item::before {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border-radius: 50px;
+  left: -9px;
+  top: 0;
+  background: #fff;
+  border: 2px solid #82909c;
+}
+/*--------------------------------------------------------------
+# Skills
+--------------------------------------------------------------*/
+.progress{
+  height: 30px;
+  border-radius: 25px;
+  overflow: visible;
+  --bs-gutter-x: 0rem;
+}
+.progress .progress-bar{
+    border-radius: 25px;
+    animation: animate-positive 2s;
+    background: linear-gradient(to left, #0D8882, #59D5CE);
+}
+.progress .progress-title{
+    font-weight: 700;
+    color: #fff;
+    margin: 0;
+    left: 15px;
+}
+.progress .progress-value{
+    width: 45px;
+    height: 33px;
+    line-height: 35px;
+    background: #f5f5f5;
+    border-radius: 50px;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+    font-size: 14px;
+    font-weight: bold;
+    color: #13c3ba;
+    position: absolute;
+    right: 0px;
+}
+@-webkit-keyframes animate-positive{
+    0% { width: 0; }
+}
+@keyframes animate-positive{
+    0% { width: 0; }
+}
+/*--------------------------------------------------------------
+# Contact
+--------------------------------------------------------------*/
+.contact .info-box {
+  box-shadow: 0 0 30px rgba(214, 215, 216, 0.6);
+  border-radius: 10px;
+}
+.contact .info-box i.bx {
+  border-radius: 50%;
+  background:#eef0f2;
+}
+.contact .social-links a {
+  line-height: 1;
+  transition: 0.3s;
+  border-radius: 50px;
+  border: 1px solid #dde1e4;
+}
+.contact .social-links a:hover {
+  color: #fff;
+  border-color: #13c3ba;
+  background: #13c3ba;
+}
+.formcontactclick {
+  color: black;
+  text-decoration: none;
+}
+/*--------------------------------------------------------------
+# Footer
+--------------------------------------------------------------*/
+#footer .social-links a {
+  line-height: 1;
+  padding: 8px 0;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  transition: 0.3s;
+}
+#footer .social-links a:hover {
+  background: #13c3ba;
+}
